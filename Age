@@ -1,0 +1,71 @@
+//Computes the user's clothing sizes according to their height, weight and age.
+//Program by Joanna Riascos
+#include <iostream>
+using namespace std;
+
+//Function declaration for hat size:
+double hat_size(double weight, double height);
+//Function declaration for waist size:
+double waist_size(double weight, int age);
+  
+int main ()
+{ 
+
+	double weight, height;
+	double hatCalc, waistCalc;
+	int age;
+	char response;
+
+//Use a do while loop to allow the user to continue:
+	do{
+	cout << "Welcome to the calculations program!\n";
+	cout << "Please enter your height (in inches):\n";
+	cin >> height;
+	cout << "Enter your weight (in pounds):\n";
+	cin >> weight;
+	cout << "Enter your age:\n";
+	cin >> age;
+	cout << "Do you wish to try again, y/n?" << endl;
+	cin >> response;
+	
+	}
+	while ( response == 'y' || response == 'Y');
+	cout << "Alright then!" << endl;
+
+	cout.setf(ios::fixed);
+	cout.setf(ios::showpoint);
+	cout.precision(2);
+
+//Calculate hat size, and waist size results
+//using their respective formulas:
+{
+double hat_size(double weight, double height);
+	hatCalc = weight/height *2.9;
+	cout << "Your hat size is: " << hatCalc<< endl;
+}
+
+
+{
+double waist_size(double weight, int age);
+int age_counter = 30;
+
+	waistCalc = weight/5.7;
+	if (age_counter >= 30)
+	waistCalc += ((age_counter - 28) /2) * 1.0/10;
+	cout << "Your waist in inches is: " << waistCalc << endl;
+	cout << "Press enter to continue..";
+	return waistCalc;
+		
+}
+
+}
+
+
+
+  
+	
+
+
+
+
+	
